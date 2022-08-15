@@ -11,7 +11,8 @@ export const Layout: React.FC<props> = ({ children }) => {
             <Header />
             <Container
                 w={"full"}
-                pt={20}
+                pt={10}
+                pb={10}
                 minH={"92.48vh"}
             >
                 {children}
