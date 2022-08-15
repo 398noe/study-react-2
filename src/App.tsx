@@ -14,7 +14,7 @@ export const App: React.FC = (props: props) => {
 			<Layout>
 				<Routes>
 					<Route path="/" element={<Thread />} />
-					<Route path="/threads/new" element={<CreateThread />} />
+					<Route path="/thread/new" element={<CreateThread />} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Layout>
