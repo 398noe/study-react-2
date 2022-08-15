@@ -5,20 +5,26 @@ import ThreadList from "./ThreadList";
 
 import { apiClient } from "../lib/apiClient";
 
-interface props {
+interface Props {
 
 }
 
-export const Thread: React.FC = (props: props) => {
+export const Thread: React.FC<Props> = (props: Props) => {
     const [threads, setThreads] = useState<ThreadsData>([]);
 
     useEffect(() => {
-
-    },[]);
-
-    const fetchThreads = () => {
-        const fetchThreadsData = async () => {
+        const exec = async () => {
+            const fetchedThreadsData = await fetchThreadsData();
+            setThreads(fetchedThreadsData);
         }
+
+        exec();
+    }, []);
+
+    const fetchThreadsData = async () => {
+        const res = await apiClient.threads.get();
+        console.log(res.body);
+        return res.body;
     }
 
     return (
@@ -30,7 +36,7 @@ export const Thread: React.FC = (props: props) => {
                     </Heading>
                 </Box>
                 <Box>
-                    <ThreadList />
+                    <ThreadList threads={threads}/>
                 </Box>
             </Stack>
         </Box>

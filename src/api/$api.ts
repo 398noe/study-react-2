@@ -2,7 +2,7 @@ import type { AspidaClient } from 'aspida'
 import type { Methods as Methods0 } from './threads'
 
 const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
-  const prefix = (baseURL === undefined ? 'https://railway-react-bulletin-board.herokuapp.com' : baseURL).replace(/\/$/, '')
+  const prefix = (baseURL === undefined ? '' : baseURL).replace(/\/$/, '')
   const PATH0 = '/threads'
   const GET = 'GET'
 

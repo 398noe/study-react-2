@@ -1,19 +1,18 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
 import React from "react";
-import { ThreadData } from "../types/Threads";
-interface props {
-
+import { ThreadData, ThreadsData } from "../types/Threads";
+interface Props {
+    threads: ThreadsData;
 }
 
-export const ThreadList: React.FC = (props: props) => {
+export const ThreadList: React.FC<Props> = (props: Props) => {
     return (
         <Stack>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
-            <OneThread title="自宅警備員を語るスレ" id={1}/>
+            {
+                props.threads.map((v) => {
+                    return <OneThread title={v.title} id={v.id} key={v.id} />
+                })
+            }
         </Stack>
     );
 }
