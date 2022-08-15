@@ -1,4 +1,4 @@
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 import ThreadList from "./ThreadList";
 
@@ -9,12 +9,16 @@ interface props {
 export const Thread: React.FC = (props: props) => {
     return (
         <Box>
-            <HStack>
-                <Box></Box>
+            <VStack>
+                <Box>
+                    <Heading size={"xl"}>
+                        新着スレッド
+                    </Heading>
+                </Box>
                 <Box>
                     <ThreadList />
                 </Box>
-            </HStack>
+            </VStack>
         </Box>
     );
 }
