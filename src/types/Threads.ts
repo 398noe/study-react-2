@@ -4,3 +4,8 @@ export interface ThreadData {
 }
 
 export type ThreadsData = Array<ThreadData>;
+
+export interface newThreadData {
+    threadId: number;
+    title: string;
+}

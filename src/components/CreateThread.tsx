@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button, FormControl, FormLabel, Heading, Input, Stack } from "@chakra-ui/react";
 
 export const CreateThread: React.FC = () => {
+    const [threadName, setThreadName] = useState("");
+
+    const handleThreadName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setThreadName(event.target.value);
+    }
+
+    const createNewThread = () => {
+        console.log(threadName);
+        
+    }
+
     return (
         <Box>
             <Stack minW={"full"} textAlign={"left"}>
@@ -13,9 +24,9 @@ export const CreateThread: React.FC = () => {
                 <Box>
                     <FormControl>
                         <FormLabel>スレッド名</FormLabel>
-                        <Input type="text" />
+                        <Input type="text" onChange={handleThreadName} value={threadName} />
                     </FormControl>
-                    <Button mt={4} colorScheme="teal">新規作成</Button>
+                    <Button mt={4} colorScheme="teal" onClick={createNewThread}>新規作成</Button>
                 </Box>
             </Stack>
         </Box>
