@@ -1,4 +1,4 @@
-import { Box, Heading, VStack } from "@chakra-ui/react";
+import { Box, Heading, Stack } from "@chakra-ui/react";
 import React from "react";
 import { OneThreadData } from "../types/Threads";
 interface props {
@@ -7,11 +7,14 @@ interface props {
 
 export const ThreadList: React.FC = (props: props) => {
     return (
-        <Box>
-            <VStack>
-                <OneThread title="自宅警備員を語るスレ"/>
-            </VStack>
-        </Box>
+        <Stack>
+            <OneThread title="自宅警備員を語るスレ" />
+            <OneThread title="自宅警備員を語るスレ" />
+            <OneThread title="自宅警備員を語るスレ" />
+            <OneThread title="自宅警備員を語るスレ" />
+            <OneThread title="自宅警備員を語るスレ" />
+            <OneThread title="自宅警備員を語るスレ" />
+        </Stack>
     );
 }
 
