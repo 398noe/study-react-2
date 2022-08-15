@@ -17,6 +17,9 @@ export const Header: React.FC = (props: props) => {
 
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
+                            <Button as="a" href="/" colorScheme={"green"}>
+                                <Text>新規作成</Text>
+                            </Button>
                             <Button onClick={toggleColorMode}>
                                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                             </Button>
