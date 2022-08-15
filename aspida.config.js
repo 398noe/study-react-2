@@ -2,8 +2,7 @@
 
 /** @type {Partial<import('aspida/dist/getConfigs').AspidaConfig>} */
 const aspidaConfig = {
-    input: "src/api",
-    baseURL: "https://railway-react-bulletin-board.herokuapp.com"
+    input: "src/api"
 }
 
 module.exports = aspidaConfig
