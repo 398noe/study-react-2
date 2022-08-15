@@ -17,7 +17,7 @@ export const Header: React.FC = (props: props) => {
 
                     <Flex alignItems={"center"}>
                         <Stack direction={"row"} spacing={7}>
-                            <Button as="a" href="/" colorScheme={"green"}>
+                            <Button as="a" href="/thread/new" colorScheme={"green"}>
                                 <Text>新規作成</Text>
                             </Button>
                             <Button onClick={toggleColorMode}>
